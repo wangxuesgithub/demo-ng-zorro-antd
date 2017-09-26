@@ -1,0 +1,30 @@
+<div class="dashboard">
+  <div nz-row>
+    <div nz-col [nzSpan]="12">
+      <div>
+        <canvas baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+      <button nz-button [nzType]="'primary'" (click)="randomize()">
+        <span>Update</span>
+      </button>
+    </div>
+    <div nz-col [nzSpan]="12">
+      <div style="display: block">
+        <canvas baseChart
+                [data]="polarAreaChartData"
+                [labels]="polarAreaChartLabels"
+                [legend]="polarAreaLegend"
+                [chartType]="polarAreaChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+  </div>
+</div>

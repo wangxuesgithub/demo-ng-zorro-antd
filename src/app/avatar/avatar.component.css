@@ -1,0 +1,34 @@
+.avatar-box {
+  background-color: #f9f9f9;
+  padding: 30px;
+  height: 150px;
+}
+:host ::ng-deep .ant-badge {
+  margin-right: 16px;
+}
+
+.head-example {
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  background: #eee;
+  display: inline-block;
+}
+:host ::ng-deep .ant-badge {
+  margin-right: 16px;
+}
+:host ::ng-deep .ant-badge {
+  margin-right: 16px;
+}
+
+:host ::ng-deep .ant-badge:not(.ant-badge-status) {
+  margin-right: 16px;
+}
+
+.head-example {
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  background: #eee;
+  display: inline-block;
+}

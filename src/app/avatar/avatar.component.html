@@ -1,0 +1,88 @@
+<div>
+  <div nz-row>
+    <div class="avatar-box" nz-col [nzSpan]="7">
+      <div>
+        <nz-avatar nzSize="large" nzIcon="user"></nz-avatar>
+        <nz-avatar [nzShape]="'square'" [nzSize]="'large'" [nzIcon]="'user'"></nz-avatar>
+        <nz-avatar nzIcon="user"></nz-avatar>
+        <nz-avatar [nzShape]="'square'" [nzIcon]="'user'"></nz-avatar>
+        <nz-avatar nzSize="small" nzIcon="user"></nz-avatar>
+        <nz-avatar [nzShape]="'square'" [nzSize]="'small'" [nzIcon]="'user'"></nz-avatar>
+      </div>
+    </div>
+    <div nz-col [nzSpan]="1"></div>
+    <div class="avatar-box" nz-col [nzSpan]="7">
+      <nz-avatar nzIcon="user"></nz-avatar>
+      <nz-avatar nzText="U"></nz-avatar>
+      <nz-avatar nzText="USER"></nz-avatar>
+      <nz-avatar nzIcon="user" nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+      <nz-avatar nzText="U" style="color:#f56a00; background-color:#fde3cf;"></nz-avatar>
+      <nz-avatar nzIcon="user" style="background-color:#87d068;"></nz-avatar>
+    </div>
+    <div nz-col [nzSpan]="1"></div>
+    <div class="avatar-box" nz-col [nzSpan]="8">
+      <nz-badge [nzCount]="5" style="margin-right: 24px;">
+        <ng-template #content><nz-avatar nzIcon="user" [nzShape]="'square'"></nz-avatar></ng-template>
+      </nz-badge>
+      <nz-badge [nzDot]="true">
+        <ng-template #content><nz-avatar nzIcon="user" [nzShape]="'square'"></nz-avatar></ng-template>
+      </nz-badge>
+    </div>
+  </div>
+  <div nz-row>
+    <div class="avatar-box" nz-col [nzSpan]="7">
+      <nz-badge [nzCount]="99" [nzOverflowCount]="10">
+        <ng-template #content>
+          <a class="head-example"></a>
+        </ng-template>
+      </nz-badge>
+      <nz-badge [nzCount]="1000" [nzOverflowCount]="99">
+        <ng-template #content>
+          <a class="head-example"></a>
+        </ng-template>
+      </nz-badge>
+      <nz-badge [nzCount]="200" [nzOverflowCount]="10">
+        <ng-template #content>
+          <a class="head-example"></a>
+        </ng-template>
+      </nz-badge>
+      <nz-badge [nzCount]="10000" [nzOverflowCount]="999">
+        <ng-template #content>
+          <a class="head-example"></a>
+        </ng-template>
+      </nz-badge>
+    </div>
+    <div nz-col [nzSpan]="1"></div>
+    <div class="avatar-box" nz-col [nzSpan]="7">
+      <nz-badge [nzCount]="25" [nzStyle]="style1"></nz-badge>
+      <nz-badge [nzCount]="4" [nzStyle]="style2"></nz-badge>
+      <nz-badge [nzCount]="109" [nzStyle]="style3"></nz-badge>
+    </div>
+    <div nz-col [nzSpan]="1"></div>
+    <div class="avatar-box" nz-col [nzSpan]="8">
+      <div>
+        <nz-badge [nzCount]="count" nzShowZero>
+          <ng-template #content>
+            <a class="head-example"></a>
+          </ng-template>
+        </nz-badge>
+        <nz-button-group>
+          <button nz-button [nzType]="'ghost'" (click)="minCount()"><i class="anticon anticon-minus"></i></button>
+          <button nz-button [nzType]="'ghost'" (click)="addCount()"><i class="anticon anticon-plus"></i></button>
+        </nz-button-group>
+      </div>
+
+      <div style="margin-top: 10px;">
+
+        <nz-badge [nzDot]="dot">
+          <ng-template #content>
+            <a class="head-example"></a>
+          </ng-template>
+        </nz-badge>
+
+        <button nz-button [nzType]="'ghost'" (click)="toggleShow()">切换红点显隐</button>
+
+      </div>
+    </div>
+  </div>
+</div>

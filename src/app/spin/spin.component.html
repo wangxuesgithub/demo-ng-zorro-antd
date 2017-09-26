@@ -1,0 +1,28 @@
+<div>
+  <div nz-row>
+    <div class="spin-box" nz-col [nzSpan]="12">
+      <nz-spin></nz-spin>
+      <p>基本用法：一个简单的loading状态</p>
+    </div>
+    <div class="spin-box" nz-col [nzSpan]="12">
+      <nz-spin [nzSize]="'small'"></nz-spin>
+      <nz-spin></nz-spin>
+      <nz-spin [nzSize]="'large'"></nz-spin>
+      <p>各种大小：小的用于文本加载，默认用于卡片容器级加载，大的用于页面级加载。</p>
+    </div>
+  <div class="spin-box" nz-col [nzSpan]="12">
+    <nz-spin [nzTip]="'正在读取数据...'">
+      <nz-alert [nzType]="'info'" [nzMessage]="'消息提示的文案'" [nzDescription]="'消息提示的辅助性文字介绍消息提示的辅助性文字介绍消息提示的辅助性文字介绍'">
+      </nz-alert>
+    </nz-spin>
+    </div>
+  <div class="spin-box" nz-col [nzSpan]="12">
+    <nz-spin [nzSpinning]="_isSpinning" class="toggle-spin">
+      <nz-alert [nzType]="'info'" [nzMessage]="'消息提示的文案'" [nzDescription]="'消息提示的辅助性文字介绍消息提示的辅助性文字介绍消息提示的辅助性文字介绍'">
+      </nz-alert>
+    </nz-spin>
+    切换加载状态：
+    <nz-switch [(ngModel)]="_isSpinning"></nz-switch>
+    </div>
+  </div>
+</div>

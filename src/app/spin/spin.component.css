@@ -1,0 +1,9 @@
+:host ::ng-deep nz-spin > div {
+  display: inline-block;
+}
+.spin-box {
+  height: 250px;
+}
+.example {
+  background-color: #f5f5f5;
+}
