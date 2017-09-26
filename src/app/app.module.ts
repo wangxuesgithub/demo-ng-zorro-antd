@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { routes } from './routes/routes';
 import { ChartsModule } from 'ng2-charts';
+import { AceEditorModule } from 'ng2-ace-editor';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -15,6 +16,7 @@ import { UsersComponent } from './users/users.component';
 import { FormComponent } from './form/form.component';
 import { AvatarComponent } from './avatar/avatar.component';
 import { SpinComponent } from './spin/spin.component';
+import { EditorComponent } from './editor/editor.component';
 
 @NgModule({
   imports: [
@@ -25,7 +27,8 @@ import { SpinComponent } from './spin/spin.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     NgZorroAntdModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    AceEditorModule
   ],
   declarations: [
     AppComponent,
@@ -35,7 +38,8 @@ import { SpinComponent } from './spin/spin.component';
     UsersComponent,
     FormComponent,
     AvatarComponent,
-    SpinComponent
+    SpinComponent,
+    EditorComponent
   ],
   bootstrap: [AppComponent]
 })

@@ -27,4 +27,29 @@
       </div>
     </div>
   </div>
+  <br/><br/><br/>
+  <div nz-row>
+    <div nz-col [nzSpan]="12">
+      <canvas baseChart
+              [data]="pieChartData"
+              [labels]="pieChartLabels"
+              [chartType]="pieChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+    </div>
+    <div nz-col [nzSpan]="12">
+      <canvas baseChart
+              [data]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [chartType]="lineChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  </div>
+  <div class="col-md-12 text-center" style="margin-top: 10px;height: 50%">
+    <button nz-button [nzType]="'primary'" (click)="randomizeType()">
+      <span>Toggle</span>
+    </button>
+  </div>
 </div>

@@ -2,15 +2,14 @@
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
     <div class="logo">
     </div>
-    <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'">
-      <li nz-menu-item routerLink="/dashboard"><span><i class="anticon anticon-home"></i><span class="nav-text">dashboard</span></span></li>
-      <li nz-menu-item routerLink="/users"><span><i class="anticon anticon-user"></i><span class="nav-text">Users</span></span></li>
-      <li nz-submenu>
-        <span title><i class="anticon anticon-shop"></i><span class="nav-text">UI Element</span></span>
-        <ul>
-          <li routerLink="/form" nz-menu-item>Form</li>
-          <li routerLink="/avatar" nz-menu-item>Avatar</li>
-          <li routerLink="/spin" nz-menu-item>Spin</li>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'" *ngFor="let child of menu">
+      <li nz-menu-item [routerLink]="child.link" *ngIf="!child.children" [nzSelected]="child.selected">
+        <span><i class="anticon {{child.icon}}"></i><span class="nav-text">{{child.text}}</span></span>
+      </li>
+      <li nz-submenu *ngIf="child.children" [nzOpen]="child.selected">
+        <span title><i class="anticon {{child.icon}}"></i><span class="nav-text">{{child.text}}</span></span>
+        <ul *ngFor="let item of child.children">
+        <li [routerLink]="item.link" [nzSelected]="item.selected" nz-menu-item>{{item.text}}</li>
         </ul>
       </li>
     </ul>
