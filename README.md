@@ -10,7 +10,7 @@
 ![brand](./images/login.png)
 ![brand](./images/dashboard.png)
 ![brand](./images/users_en.png)
-- 支持国际化，中英文切换
+> 支持国际化，中英文切换
 ![brand](./images/users_zh.png)
 ![brand](./images/editor.png)
 ![brand](./images/form.png)
