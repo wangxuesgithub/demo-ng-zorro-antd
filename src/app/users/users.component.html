@@ -2,7 +2,7 @@
   <form nz-form [nzLayout]="'inline'">
     <div nz-row nz-form-item>
       <div nz-form-label>
-        <label>Bordered</label>
+        <label>{{'Bordered'|translate}}</label>
       </div>
       <div nz-form-control>
         <nz-switch [(ngModel)]="_bordered" [ngModelOptions]="{standalone: true}"></nz-switch>
@@ -10,7 +10,7 @@
     </div>
     <div nz-row nz-form-item>
       <div nz-form-label>
-        <label>Loading</label>
+        <label>{{'Loading'|translate}}</label>
       </div>
       <div nz-form-control>
         <nz-switch [(ngModel)]="_loading" [ngModelOptions]="{standalone: true}"></nz-switch>
@@ -18,7 +18,7 @@
     </div>
     <div nz-row nz-form-item>
       <div nz-form-label>
-        <label>Pagination</label>
+        <label>{{'Pagination'|translate}}</label>
       </div>
       <div nz-form-control>
         <nz-switch [(ngModel)]="_pagination" [ngModelOptions]="{standalone: true}"></nz-switch>
@@ -26,7 +26,7 @@
     </div>
     <div nz-row nz-form-item>
       <div nz-form-label>
-        <label>Title</label>
+        <label>{{'Title'|translate}}</label>
       </div>
       <div nz-form-control>
         <nz-switch [(ngModel)]="_title" [ngModelOptions]="{standalone: true}"></nz-switch>
@@ -34,7 +34,7 @@
     </div>
     <div nz-row nz-form-item>
       <div nz-form-label>
-        <label>Column Header</label>
+        <label>{{'ColumnHeader'|translate}}</label>
       </div>
       <div nz-form-control>
         <nz-switch [(ngModel)]="_header" [ngModelOptions]="{standalone: true}"></nz-switch>
@@ -42,7 +42,7 @@
     </div>
     <div nz-row nz-form-item>
       <div nz-form-label>
-        <label>Footer</label>
+        <label>{{'Footer'|translate}}</label>
       </div>
       <div nz-form-control>
         <nz-switch [(ngModel)]="_footer" [ngModelOptions]="{standalone: true}"></nz-switch>
@@ -50,7 +50,7 @@
     </div>
     <div nz-row nz-form-item>
       <div nz-form-label>
-        <label>Fixed Header</label>
+        <label>{{'FixedHeader'|translate}}</label>
       </div>
       <div nz-form-control>
         <nz-switch [(ngModel)]="_fixHeader" [ngModelOptions]="{standalone: true}"></nz-switch>
@@ -58,18 +58,18 @@
     </div>
     <div nz-row nz-form-item>
       <div nz-form-label>
-        <label>Size</label>
+        <label>{{'Size'|translate}}</label>
       </div>
       <div nz-form-control>
         <nz-radio-group [(ngModel)]="_size" [ngModelOptions]="{standalone: true}">
           <label nz-radio-button [nzValue]="'default'">
-            <span>Default</span>
+            <span>{{'Default'|translate}}</span>
           </label>
           <label nz-radio-button [nzValue]="'middle'">
-            <span>Middle</span>
+            <span>{{'Middle'|translate}}</span>
           </label>
           <label nz-radio-button [nzValue]="'small'">
-            <span>Small</span>
+            <span>{{'Small'|translate}}</span>
           </label>
         </nz-radio-group>
       </div>
@@ -87,14 +87,14 @@
   [nzShowFooter]="_footer"
   [nzShowTitle]="_title"
   [nzSize]="_size">
-  <span nz-table-title>Here is Title</span>
+  <span nz-table-title>{{'Title'|translate}}</span>
   <ng-template #nzFixedHeader [ngIf]="_header&&!_fixHeader">
     <thead nz-thead>
     <tr>
-      <th nz-th [nzWidth]="'150px'"><span>Name</span></th>
-      <th nz-th [nzWidth]="'70px'"><span>Age</span></th>
-      <th nz-th [nzWidth]="'360px'"><span>Address</span></th>
-      <th nz-th><span>Action</span></th>
+      <th nz-th [nzWidth]="'150px'"><span>{{'Name'|translate}}</span></th>
+      <th nz-th [nzWidth]="'70px'"><span>{{'Age'|translate}}</span></th>
+      <th nz-th [nzWidth]="'360px'"><span>{{'Address'|translate}}</span></th>
+      <th nz-th><span>{{'Action'|translate}}</span></th>
     </tr>
     </thead>
   </ng-template>
@@ -129,5 +129,5 @@
     </td>
   </tr>
   </tbody>
-  <span nz-table-footer>Here is footer</span>
+  <span nz-table-footer>{{'Footer'|translate}}</span>
 </nz-table>

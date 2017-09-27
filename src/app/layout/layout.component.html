@@ -2,14 +2,16 @@
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
     <div class="logo">
     </div>
+    <h5 (click)="changeLang()" class="change-lang">{{'translate'|translate}}</h5>
+    <br/>
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'" *ngFor="let child of menu">
       <li nz-menu-item [routerLink]="child.link" *ngIf="!child.children" [nzSelected]="child.selected">
-        <span><i class="anticon {{child.icon}}"></i><span class="nav-text">{{child.text}}</span></span>
+        <span><i class="anticon {{child.icon}}"></i><span class="nav-text">{{ (child.text | translate) || child.translate }}</span></span>
       </li>
       <li nz-submenu *ngIf="child.children" [nzOpen]="child.selected">
-        <span title><i class="anticon {{child.icon}}"></i><span class="nav-text">{{child.text}}</span></span>
+        <span title><i class="anticon {{child.icon}}"></i><span class="nav-text">{{ (child.text | translate) || child.translate }}</span></span>
         <ul *ngFor="let item of child.children">
-        <li [routerLink]="item.link" [nzSelected]="item.selected" nz-menu-item>{{item.text}}</li>
+        <li [routerLink]="item.link" [nzSelected]="item.selected" nz-menu-item>{{ (item.text | translate) || item.translate }}</li>
         </ul>
       </li>
     </ul>

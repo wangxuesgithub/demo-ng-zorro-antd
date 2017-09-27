@@ -12,14 +12,15 @@ export const routes = [
         path: '',
         component: LayoutComponent,
         children: [
-            { path: 'dashboard', component: DashboardComponent },
-            { path: 'users', component: UsersComponent },
-            { path: 'form', component: FormComponent },
-            { path: 'avatar', component: AvatarComponent },
-            { path: 'spin', component: SpinComponent },
-            { path: 'editor', component: EditorComponent }
+          { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+          { path: 'dashboard', component: DashboardComponent },
+          { path: 'users', component: UsersComponent },
+          { path: 'form', component: FormComponent },
+          { path: 'avatar', component: AvatarComponent },
+          { path: 'spin', component: SpinComponent },
+          { path: 'editor', component: EditorComponent }
         ]
     },
-    { path: 'login', component: LoginComponent },
-    { path: '', redirectTo: 'login', pathMatch: 'full' }
+    { path: 'login', component: LoginComponent }
+    // { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];

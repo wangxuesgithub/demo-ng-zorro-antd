@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "cross-env PORT=8080 ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -26,6 +26,7 @@
     "ng-zorro-antd": "^0.5.1",
     "ng2-ace-editor": "^0.3.1",
     "ng2-charts": "^1.6.0",
+    "ng2-translate": "^5.0.0",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },
